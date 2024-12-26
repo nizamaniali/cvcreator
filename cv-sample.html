@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cvstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cvForm">
+      <form action="" onsubmit="return false">
+        <div class="contact-info">
+          <h1>Contact information</h1>
+          <input type="text" name="name" id="formName" placeholder="Name" />
+          <input
+            type="number"
+            class="formInput"
+            name=""
+            id="mobileNumber"
+            placeholder="Mobile Number"
+          />
+          <input
+            type="email"
+            class="formInput"
+            name=""
+            id="email"
+            placeholder="Email"
+          />
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="address"
+            placeholder="Address"
+          />
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="site"
+            placeholder="Website"
+          />
+          <input
+            type="file"
+            name=""
+            id="image"
+            placeholder="Photo"
+            accept="image/jpeg, image/png, image/jpg"
+          />
+        </div>
+
+        <div class="education-info" id="education-div">
+          <h1>Education</h1>
+
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="University"
+            placeholder="Institution"
+          />
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="degree"
+            placeholder="Degree (Bachelors, Masters, Phd)"
+          />
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="educationYears"
+            placeholder="Education Years (2019 - 2023)"
+          />
+          <input
+            type="button"
+            value="Add Education"
+            id="addEducation"
+            onclick="appendEducation()"
+          />
+        </div>
+
+        <div class="skill-info" id="skill-div">
+          <h1>Skills</h1>
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="skill1"
+            placeholder="Skill "
+          />
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="skill2"
+            placeholder="Skill "
+          />
+          <input
+            type="button"
+            value="Add Skills"
+            id="addSkills"
+            onclick="appendSkills()"
+          />
+        </div>
+        <div class="lang-info" id="lang-div">
+          <h1>Languages</h1>
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="lang1"
+            placeholder="Language you speak"
+          />
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="lang2"
+            placeholder="Language you speak"
+          />
+          <input
+            type="button"
+            value="Add Language"
+            id="addLang"
+            onclick="appendLang ()"
+          />
+        </div>
+        <div class="prof-para">
+          <h1>Profile information</h1>
+          <!-- <input
+            type="textarea"
+            class="formInput"
+            name=""
+            id="prof-para"
+            placeholder="Please write something about you"
+            rows="5"
+            cols="50"
+          /> -->
+          <textarea
+            name=""
+            id="prof-para"
+            rows="6"
+            cols="50"
+            placeholder="Please write something about yourself"
+            class="formInput"
+          ></textarea>
+        </div>
+        <div class="work-exp-info" id="exp-div">
+          <h1>Work Experience</h1>
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="placeWorked1"
+            placeholder="Place where you worked"
+          />
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="role"
+            placeholder="Your role there"
+          />
+          <input
+            type="text"
+            class="formInput"
+            name=""
+            id="role-info"
+            placeholder="Information About your role"
+          />
+          <input
+            type="button"
+            value="Add Experience"
+            id="addExp"
+            onclick="appendExp()"
+          />
+        </div>
+
+        <input type="submit" value="Submit" onclick="submitBtn()" />
+      </form>
+    </div>
+
+    <!-- form html end -->
+
+    <!-- cv html start ************************************ -->
+    <div class="main">
+      <div class="profile">
+        <div class="profileimg">
+          <img src="./profile-icon-9.png" alt="" id="cvImage" />
+        </div>
+        <div class="contact">
+          <h3>Contact</h3>
+          <div class="line"></div>
+          <p class="upData">+92-300-020210</p>
+          <p class="upData">email@email.com</p>
+          <p class="upData">123 any street, any city any any</p>
+          <p class="upData">www.site.com</p>
+        </div>
+        <div class="education" id="eduDiv">
+          <h3>Education</h3>
+          <div class="line"></div>
+          <div class="secEduDiv" id="secEduDiv">
+            <h4 class="upData ed-ed" class="eduData">2025 - 2030</h4>
+            <p class="upData ed-ed" class="eduData">University Name</p>
+            <p class="upData ed-ed" class="eduData">Degree Name</p>
+          </div>
+          <!-- <ul>
+            <li>Bachelors</li>
+          </ul> -->
+        </div>
+        <div class="skills">
+          <h3>Skills</h3>
+          <div class="line"></div>
+          <p class="upData">Skill 1</p>
+          <p class="upData">Skill 2</p>
+          <!-- <p class="upData">skill 3</p> -->
+        </div>
+        <div class="languages">
+          <h3>Languages</h3>
+          <div class="line"></div>
+          <p class="upData">Language 1</p>
+          <p class="upData">Language 2</p>
+        </div>
+      </div>
+      <div class="experience">
+        <div class="name">
+          <p id="dataName">Your Name</p>
+          <div class="nameLine"></div>
+        </div>
+
+        <div class="prof-info">
+          <h3>Profile</h3>
+          <p class="upData">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+            nesciunt molestiae exercitationem possimus corrupti cumque animi
+            consequuntur, non fugiat quisquam corporis, dolorem voluptate
+            accusamus, doloribus error illum magni! Pariatur, ad. Lorem ipsum
+            dolor sit, amet consectetur adipisicing elit. At, quibusdam!
+          </p>
+        </div>
+        <div class="work-exp">
+          <h3>WORK EXPERIENCE</h3>
+          <div class="exp exp1">
+            <h4 class="location upData">Place where Worked</h4>
+            <p class="upData">role</p>
+            <ul>
+              <li class="upData">about the role</li>
+            </ul>
+            <!-- <input type="button" value="add expiereince" /> -->
+            <!-- <p class="upData">about the role</p> -->
+          </div>
+          <!-- <div class="exp2">
+            <h4 class="location" class="upData">Place where Worked</h4>
+            <p class="upData">role</p>
+            <ul>
+              <li class="upData">about the role</li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

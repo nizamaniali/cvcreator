@@ -1,0 +1,56 @@
+.cvForm {
+  border: 2px solid black;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* padding: 50px; */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
+  /* justify-content: center; */
+  align-items: center;
+  font-family: poppins;
+  /* font-size: 1.5rem; */
+}
+form input {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-family: poppins;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.contact-info,
+.education-info,
+.skill-info,
+.lang-info,
+.prof-para,
+.work-exp-info {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  /* padding: 20px; */
+}
+
+.skill-info {
+  margin-bottom: 20px;
+}
+
+form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-family: poppins;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

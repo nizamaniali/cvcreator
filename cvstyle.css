@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+/* form styling start *************************************** */
+
+.cvForm {
+  border: 2px solid black;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* padding: 50px; */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
+  /* justify-content: center; */
+  align-items: center;
+  font-family: poppins;
+  /* font-size: 1.5rem; */
+}
+form input {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-family: poppins;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.contact-info,
+.education-info,
+.skill-info,
+.lang-info,
+.prof-para,
+.work-exp-info {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  /* padding: 20px; */
+}
+
+.skill-info {
+  margin-bottom: 20px;
+}
+
+form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-family: poppins;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* form styling end************************************************** */
+
+.main {
+  display: flex;
+}
+
+.profile {
+  width: 30%;
+  border: 2px solid black;
+
+  line-height: 50px;
+  font-size: 1rem;
+
+  background-color: rgb(20, 48, 75);
+  color: white;
+  font-family: poppins;
+
+  /* font-size: 32px; */
+  font-size: 20px;
+}
+
+.experience {
+  width: 70%;
+}
+
+/* profile image styling */
+
+.profileimg {
+  width: 40%;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  outline: 5px solid white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 80px;
+  /* margin-bottom: -50px; */
+}
+.profileimg > img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* profile image styling end*/
+
+/* contact styling start */
+
+.contact,
+.education,
+.skills,
+.languages {
+  margin-top: 70px;
+  /* padding-left: 100px; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* margin: auto; */
+  line-height: 40px;
+  font-family: poppins;
+}
+.contact {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.contact > h3 {
+  margin-top: 70px;
+  font-weight: 400;
+  font-weight: 300px;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+}
+.contact > div {
+  margin: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.line {
+  background-color: white;
+  height: 2px;
+  width: 180px;
+  margin: auto;
+  margin-top: 13px;
+  margin-bottom: 10px;
+}
+
+/* contact styling ends here */
+
+.education > h3 {
+  margin-top: 70px;
+  font-weight: 400;
+  font-weight: 300px;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+}
+.education > div {
+  margin: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* education endss here */
+
+/* skills start here */
+
+.skills > h3 {
+  font-weight: 400;
+  font-weight: 300px;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+}
+.skills > div {
+  margin: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* skills end here */
+
+/* languages start here */
+
+.languages > h3 {
+  font-weight: 400;
+  font-weight: 300px;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  /* text-align: center; */
+}
+.languages > div {
+  margin: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.languages {
+  margin-bottom: 70px;
+}
+
+/* languages end here */
+
+/* profile / left section ends hereeeeeeeeeeeeee *********** */
+
+.experience {
+  color: rgb(20, 48, 75);
+  padding: 40px;
+  font-family: poppins;
+}
+
+.name {
+  font-size: 5rem;
+  text-align: center;
+  padding: 100px;
+  font-family: poppins;
+}
+.nameLine {
+  border: 2px solid rgb(20, 48, 75);
+  /* background-color: rgb(20, 48, 75); */
+  height: 2px;
+  width: 50%;
+  margin: auto;
+  margin-top: 13px;
+  margin-bottom: 10px;
+}
+
+.prof-info,
+.work-exp {
+  padding-left: 50px;
+  font-size: 1.4rem;
+  font-family: poppins;
+}
+
+.prof-info h3 {
+  /* font-size: 1.2rem; */
+  font-size: 2rem;
+  font-family: poppins;
+  font-weight: 600;
+  border-bottom: 2px solid rgb(20, 48, 75);
+}
+
+.prof-info p {
+  margin-top: 10px;
+  word-break: break-all;
+}
+
+.work-exp {
+  margin-top: 50px;
+  /* font-family: poppins; */
+}
+
+.work-exp h3 {
+  font-size: 2rem;
+  font-family: poppins;
+  font-weight: 600;
+  border-bottom: 2px solid rgb(20, 48, 75);
+  margin-bottom: 10px;
+}
+
+.work-exp ul {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.exp,
+.exp2 {
+  margin-left: 20px;
+}
+
+.location {
+  font-family: poppins;
+  font-weight: 800px;
+  margin-bottom: 10px;
+  /* font-size: 3rem; */
+}
+
+.exp2 {
+  margin-top: 20px;
+}
+
+/* now all the extra data of buttons styling */
+
+.extraExp {
+  /* margin-top: 100px; */
+}
