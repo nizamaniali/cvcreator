@@ -279,7 +279,8 @@ form textarea {
 .location {
   font-family: poppins;
   font-weight: 800px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   /* font-size: 3rem; */
 }
 
@@ -291,4 +292,8 @@ form textarea {
 
 .extraExp {
   /* margin-top: 100px; */
+}
+
+.display {
+  display: none;
 }

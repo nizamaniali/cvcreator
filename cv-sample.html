@@ -17,17 +17,24 @@
     />
   </head>
   <body>
-    <div class="cvForm">
+    <div class="cvForm" id="cvForm">
       <form action="" onsubmit="return false">
         <div class="contact-info">
           <h1>Contact information</h1>
-          <input type="text" name="name" id="formName" placeholder="Name" />
+          <input
+            type="text"
+            name="name"
+            id="formName"
+            placeholder="Name"
+            required
+          />
           <input
             type="number"
             class="formInput"
             name=""
             id="mobileNumber"
             placeholder="Mobile Number"
+            required
           />
           <input
             type="email"
@@ -35,6 +42,7 @@
             name=""
             id="email"
             placeholder="Email"
+            required
           />
           <input
             type="text"
@@ -42,6 +50,7 @@
             name=""
             id="address"
             placeholder="Address"
+            required
           />
           <input
             type="text"
@@ -49,6 +58,7 @@
             name=""
             id="site"
             placeholder="Website"
+            required
           />
           <input
             type="file"
@@ -56,6 +66,7 @@
             id="image"
             placeholder="Photo"
             accept="image/jpeg, image/png, image/jpg"
+            required
           />
         </div>
 
@@ -68,6 +79,7 @@
             name=""
             id="University"
             placeholder="Institution"
+            required
           />
           <input
             type="text"
@@ -75,6 +87,7 @@
             name=""
             id="degree"
             placeholder="Degree (Bachelors, Masters, Phd)"
+            required
           />
           <input
             type="text"
@@ -82,6 +95,7 @@
             name=""
             id="educationYears"
             placeholder="Education Years (2019 - 2023)"
+            required
           />
           <input
             type="button"
@@ -99,6 +113,7 @@
             name=""
             id="skill1"
             placeholder="Skill "
+            required
           />
           <input
             type="text"
@@ -106,12 +121,14 @@
             name=""
             id="skill2"
             placeholder="Skill "
+            required
           />
           <input
             type="button"
             value="Add Skills"
             id="addSkills"
             onclick="appendSkills()"
+            required
           />
         </div>
         <div class="lang-info" id="lang-div">
@@ -122,6 +139,7 @@
             name=""
             id="lang1"
             placeholder="Language you speak"
+            required
           />
           <input
             type="text"
@@ -129,6 +147,7 @@
             name=""
             id="lang2"
             placeholder="Language you speak"
+            required
           />
           <input
             type="button"
@@ -155,6 +174,7 @@
             cols="50"
             placeholder="Please write something about yourself"
             class="formInput"
+            required
           ></textarea>
         </div>
         <div class="work-exp-info" id="exp-div">
@@ -165,6 +185,7 @@
             name=""
             id="placeWorked1"
             placeholder="Place where you worked"
+            required
           />
           <input
             type="text"
@@ -172,6 +193,7 @@
             name=""
             id="role"
             placeholder="Your role there"
+            required
           />
           <input
             type="text"
@@ -179,6 +201,7 @@
             name=""
             id="role-info"
             placeholder="Information About your role"
+            required
           />
           <input
             type="button"
@@ -195,7 +218,7 @@
     <!-- form html end -->
 
     <!-- cv html start ************************************ -->
-    <div class="main">
+    <div class="main display" id="mainCv">
       <div class="profile">
         <div class="profileimg">
           <img src="./profile-icon-9.png" alt="" id="cvImage" />
@@ -211,7 +234,7 @@
         <div class="education" id="eduDiv">
           <h3>Education</h3>
           <div class="line"></div>
-          <div class="secEduDiv" id="secEduDiv">
+          <div class="secEduDivs" id="secEduDiv">
             <h4 class="upData ed-ed" class="eduData">2025 - 2030</h4>
             <p class="upData ed-ed" class="eduData">University Name</p>
             <p class="upData ed-ed" class="eduData">Degree Name</p>
@@ -220,14 +243,15 @@
             <li>Bachelors</li>
           </ul> -->
         </div>
-        <div class="skills">
+        <div class="skills" id="skillDiv">
           <h3>Skills</h3>
           <div class="line"></div>
+
           <p class="upData">Skill 1</p>
           <p class="upData">Skill 2</p>
           <!-- <p class="upData">skill 3</p> -->
         </div>
-        <div class="languages">
+        <div class="languages" id="langDiv">
           <h3>Languages</h3>
           <div class="line"></div>
           <p class="upData">Language 1</p>
@@ -236,7 +260,7 @@
       </div>
       <div class="experience">
         <div class="name">
-          <p id="dataName">Your Name</p>
+          <p id="cvName">Your Name</p>
           <div class="nameLine"></div>
         </div>
 
@@ -250,14 +274,15 @@
             dolor sit, amet consectetur adipisicing elit. At, quibusdam!
           </p>
         </div>
-        <div class="work-exp">
+        <div class="work-exp" id="workExpDiv">
           <h3>WORK EXPERIENCE</h3>
           <div class="exp exp1">
             <h4 class="location upData">Place where Worked</h4>
             <p class="upData">role</p>
-            <ul>
+            <p class="upData">about the role</p>
+            <!-- <ul>
               <li class="upData">about the role</li>
-            </ul>
+            </ul> -->
             <!-- <input type="button" value="add expiereince" /> -->
             <!-- <p class="upData">about the role</p> -->
           </div>

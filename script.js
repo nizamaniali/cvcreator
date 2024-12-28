@@ -58,9 +58,8 @@ function appendEducation() {
     newBtn.addEventListener('click', appendEducation);
     // newBtn.addEventListener(onclick, secondBtn);
     // console.log('hello worlddddddddd');
-
-    appendEduCount += 1;
   }
+  appendEduCount += 1;
 }
 
 function appendSkills() {
@@ -144,14 +143,40 @@ function appendExp() {
 }
 
 function submitBtn(event) {
-  const formName = document.getElementById('formName');
+  //   const formName = document.getElementById('formName');
   const dataName = document.getElementById('dataName');
   const formImage = document.getElementById('image');
   const cvImage = document.getElementById('cvImage');
+
+  //   const mainCv = document.getElementById('mainCv');
+  //   mainCv.classList.remove('display');
+
+  //   const cvForm = document.getElementById('cvForm');
+  //   cvForm.classList.add('display');
+
+  for (let i = 0; i < formData.length; i++) {
+    if (formData[i].value == '') {
+      alert('please do not leave any field empty');
+      break;
+    } else {
+      const mainCv = document.getElementById('mainCv');
+      mainCv.classList.remove('display');
+
+      const cvForm = document.getElementById('cvForm');
+      cvForm.classList.add('display');
+      break;
+    }
+  }
+
+  const formName = document.getElementById('formName');
+  const cvName = document.getElementById('cvName');
+
+  cvName.textContent = formName.value;
+
   //   const newBtn = null;
   cvImage.src = URL.createObjectURL(formImage.files[0]);
 
-  console.log('it works');
+  //   console.log('it works');
   //   dataName.textContent = formName.value;
 
   for (let i = 0; i < formData.length; i++) {
@@ -160,61 +185,80 @@ function submitBtn(event) {
 
   // now i am working for all the extra data here, first by calling  education data
 
-  const extraEducation = document.getElementsByClassName('extraEducation');
-  const eduData = document.getElementsByClassName('eduData');
-  const eduDiv = document.getElementById('eduDiv');
-  childDiv = document.getElementById('secEduDiv');
+  //   const extraEducation = document.getElementsByClassName('extraEducation');
+  //   const eduData = document.getElementsByClassName('eduData');
+  //   const eduDiv = document.getElementById('eduDiv');
+  //   childDiv = document.getElementById('secEduDiv');
+  //   childDivElements = document.getElementsByClassName('secEduDivs');
+  //   const individual = document.getElementsByClassName("ed-ed");
+  //   let clone = null;
 
-  //   for (let i = 0; i <= appendEduCount; i++) {
-  //     const clone = eduDiv.appendChild(childDiv.cloneNode(true));
+  //   if (appendEduCount > 0)
+  //     clone = eduDiv.appendChild(childDiv.cloneNode(true));
   //     eduDiv.appendChild(clone);
+  //     console.log(clone.children);
   //   }
 
-  console.log(extraEducation);
-  //   console.log(eduData);
+  //   for (let i = 0; i < appendEduCount; i++) {
+  //     clone = childDiv.appendChild(eduData.clone());
+  //     childDiv.appendChild(clone);
+  //   }
+  //   console.log(childDiv);
 
-  //   const clone = c
+  //   updating Education
 
-  for (let i = 0; i < extraEducation.length; i++) {
-    // eduData[i].textContent
-    //    const clone =  eduDiv.appendChild(childDiv[i].cloneNode(true));
+  const extraEducation = document.getElementsByClassName('extraEducation');
+  const eduDiv = document.getElementById('eduDiv');
+  const childDiv = document.getElementById('secEduDiv');
 
-    const clone = eduDiv.appendChild(childDiv.cloneNode(true));
+  for (let i = 0; i < extraEducation.length; i += 3) {
+    const clone = childDiv.cloneNode(true);
+
+    clone.querySelector('h4').textContent = extraEducation[i + 2].value;
+    clone.querySelectorAll('p')[1].textContent = extraEducation[i + 1].value;
+    clone.querySelectorAll('p')[0].textContent = extraEducation[i].value;
+
     eduDiv.appendChild(clone);
-
-    // ******** i need value of class extraEducation and i get it with this
-    console.log(extraEducation[i].value);
-
-    // i need to update the value now
-
-    // clone is the entire div that is being cloned, thrice due to the loop
-    console.log(clone.children);
-
-    // clone[i].textContent = extraEducation[i].value;
-
-    // const updatingData = (eduData[i] = extraEducation[i].value);
-    // eduDiv.appendChild((eduData[i] = extraEducation[i].value));
   }
 
-  // eduDiv.appendChild((extraEducation[i].textContent = eduData[i].value));
-  //   console.log(extraEducation[0].value);
-  // console.log(eduData[0].value);
+  //   updating skills
+  const extraSkills = document.getElementsByClassName('extraSkills');
+  const skillDiv = document.getElementById('skillDiv');
+  for (let i = 0; i < extraSkills.length; i++) {
+    const newPara = document.createElement('p');
+    newPara.textContent = extraSkills[i].value;
+    skillDiv.appendChild(newPara);
+  }
 
-  //   const educationDiv = document.getElementById('eduDiv');
+  //   updating  languages
+  const extraLang = document.getElementsByClassName('extraLang');
+  const langDiv = document.getElementById('langDiv');
+  for (let i = 0; i < extraLang.length; i++) {
+    const newPara = document.createElement('p');
+    newPara.textContent = extraLang[i].value;
+    langDiv.appendChild(newPara);
+  }
 
-  //   const h3 = document.createElement('h3');
-  //   const p1 = document.createElement('p1');
-  //   const p2 = document.createElement('p2');
+  //   updating workExperience
+  const extraExp = document.getElementsByClassName('extraExp');
+  const workExpDiv = document.getElementById('workExpDiv');
+  const newExpDiv = document.createElement('div');
+  newExpDiv.classList.add('exp');
 
-  //   const h3Text = document.createTextNode(extraEducation[0].value);
-  //   const p1Text = document.createTextNode(extraEducation[1].value);
-  //   const p2Text = document.createTextNode(extraEducation[2].value);
+  for (let i = 0; i < extraExp.length; i += 3) {
+    const h4 = document.createElement('h4');
+    h4.textContent = extraExp[i].value;
+    h4.classList.add('location');
+    newExpDiv.appendChild(h4);
 
-  //   h3.appendChild(h3Text);
-  //   p1.appendChild(p1Text);
-  //   p2.appendChild(p2Text);
+    const p1 = document.createElement('p');
+    p1.textContent = extraExp[i + 1].value;
+    newExpDiv.appendChild(p1);
 
-  //   educationDiv.appendChild(h3, p1, p2);
+    const p2 = document.createElement('p');
+    p2.textContent = extraExp[i + 2].value;
+    newExpDiv.appendChild(p2);
 
-  //   h3.create
+    workExpDiv.appendChild(newExpDiv);
+  }
 }
